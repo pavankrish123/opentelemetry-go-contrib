@@ -199,6 +199,6 @@ func (eksUtils eksDetectorUtils) getContainerID() (string, error) {
 			return str[len(str)-containerIDLength:], nil
 		}
 	}
-	return "", fmt.Errorf("getContainerID() error: cannot read containerID from file %s %s", defaultCgroupPath,
+	return "", fmt.Errorf("getContainerID() error: cannot read containerID from file %s [debug]%s ", defaultCgroupPath,
 		fileData)
 }
